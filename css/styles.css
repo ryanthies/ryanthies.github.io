@@ -1,0 +1,306 @@
+/* --------------------------
+  Body and Nav Styles
+--------------------------- */
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
+
+* {
+	box-sizing: border-box; 
+}
+
+/* --------------------------
+  Clear fix hack
+--------------------------- */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+body {
+	color: #797e83;
+	background: #eeeeee;
+	font-size: 16px;
+	margin: 0;
+	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+.main-header,
+.nav {
+	display: flex;
+	flex-direction: column;
+}
+.main-header {
+	height: 104px;
+	background: #394243;
+	padding-top: 20px;
+	box-shadow: 0 1px 20px #666666;
+}
+.site-logo {
+	text-align: center;
+	width: 100%;
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #606768;
+}
+.nav {
+	flex-direction: row;
+	justify-content: space-between;
+	align-self: center;
+}
+.nav a {
+	display: block;
+	color: #AFB3B3;
+	font-size: .9em;
+	font-weight: 300;
+	text-align: center;
+	padding: .6em 1.3em;
+}
+.nav a:hover {
+	color: #ffffff;
+}
+h1 {
+	font-size: 1.6em;
+}
+ul,
+li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none; 
+}
+a {
+	color: #656a6e;
+	text-decoration: none;
+	font-weight: 400; 
+}
+.nav li a:hover {
+	box-shadow: 0 1px 0 #5b967c; 
+}
+.container {
+	width: 100%;
+	margin: auto;
+}
+.main-content {
+	margin-top: 3.25em;
+}
+
+
+/* --------------------------
+  Card Styles
+--------------------------- */
+.card {
+	padding: 1.5em 1em;
+	border-radius: 0.25em;
+	background: #ffffff;
+}
+.card img {
+	width: 100%;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 1.6em;
+}
+.card h1 {
+	color: #394243;
+	margin-top: 0;
+	margin-bottom: .6em;
+	line-height: 1.25;
+}
+.card p {
+	color: #394243;
+	margin-top: 0;
+	margin-bottom: .6em;
+	line-height: 1.25;
+}
+.card .card-available {
+	color: #999999;
+	font-size: .8em;
+	margin-bottom: 0;
+}
+.card .card-date {
+	margin-bottom: 1.6em;
+}
+.btn-container {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	width: 40%;
+	font-size: 0.85em;
+	color: #fff;
+	text-align: center;
+	padding: 0.75em 1.5em;
+	margin-top: auto;
+	background-color: #45996F;
+	display: inline-block;
+}
+.btn:hover {
+	background-color: #327051;
+}
+.secondary {
+	color: #AFB3B3; 
+	background-color: rgba(39, 141, 164, 0);
+	border: 2px solid #AFB3B3;
+}
+.secondary:hover {
+	color: #8C9393;
+	background-color: rgba(140, 147, 147, 0.2);
+	border: 2px solid #8C9393;
+}
+.main-content {
+	width: 95%;
+	max-width: 1000px;
+	margin: 2em auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 20px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/* --------------------------
+  Modal Styles
+--------------------------- */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0 16px;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: block;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: #394243;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 14px 16px;
+}
+
+.modal-body {
+	padding: 2px 16px;
+}
+
+.modal-body-img {
+	display: block;
+}
+
+.modal-body-img img {
+	width: 50%;
+	height: auto;
+	margin-top: 0;
+	margin-bottom: 1.6em;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+
+/* --------------------------
+  Media Queries
+--------------------------- */
+@media (min-width: 769px) {
+	.main-header {
+		position: fixed;
+    	top: 0;
+    	width: 100%;
+		flex-direction: row;
+		padding-top: 0;
+		height: 80px;
+	}
+	.site-logo {
+		text-align: left;
+		margin-top: 29px;
+		margin-right: auto;
+		margin-left: 3em;
+		border-bottom: 1px solid rgba(255, 255, 255, 0);
+	}
+	.nav {
+		margin-top: 0;
+		align-self: center;
+		margin-right: 1.5em;
+		max-width: 600px;
+	}
+	.nav li {
+		margin-left: .5em;
+		margin-right: .5em;
+	}
+	.main-content {
+		margin-top: 100px;
+	}
+
+}
+
+
+@media (min-width: 1200px) {
+	.container {
+		width: 100%;
+	}
+}
+
